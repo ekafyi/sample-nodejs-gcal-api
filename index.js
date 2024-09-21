@@ -8,9 +8,7 @@ const app = express();
 const port = process.env.PORT;
 
 // ===== GCal data ===== //
-const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 const CAL_TZ = "Asia/Jakarta";
-
 const SAMPLE_EVENT = {
   summary: "Sample Event",
   description: `Eiusmod nulla eiusmod occaecat consequat sit eu exercitation nisi.`,
@@ -28,6 +26,7 @@ const GCAL_LIST_PARAMS = {
 // /end GCal data //
 
 // ===== Credentials ===== //
+const SCOPES = ["https://www.googleapis.com/auth/calendar"];
 // Use with Oauth2
 const oauth2Client = new google.auth.OAuth2(
   process.env.OAUTH2_CREDS_CLIENT_ID,
